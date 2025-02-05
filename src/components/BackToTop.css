@@ -1,0 +1,23 @@
+/* Back to Top Button Styles */
+.back-to-top {
+    position: fixed;
+    bottom: 50px;
+    right: 50px;
+    height: 60px;
+    width: 60px;
+    font-size: 24px;
+    border-radius: 50%;
+    background: linear-gradient(to bottom, #c69f94, #d9d2c3); /* Mocha Mousse gradient */
+    color: black; /* Black arrow */
+    border: none;
+    cursor: pointer;
+    z-index: 9999;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .back-to-top:hover {
+    transform: scale(1.1); /* Slight enlarge on hover */
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3);
+  }
+  

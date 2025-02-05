@@ -1,0 +1,48 @@
+/* Force the carousel library’s default backgrounds to be transparent */
+.carousel-root,
+.carousel,
+.carousel .slider-wrapper,
+.carousel .slider,
+.carousel .slide {
+  background: transparent !important;
+}
+
+/* Responsive slider container */
+.carousel-container {
+  width: 100%;
+  max-width: 1200px;
+  height: 500px; /* Default height */
+  margin: 0 auto;
+  padding: 0;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Images fill their slides. No white gap. */
+.carousel .slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* 🔹 Responsive Adjustments */
+@media (max-width: 1024px) {
+  .carousel-container {
+    height: 400px;
+  }
+}
+
+@media (max-width: 768px) {
+  .carousel-container {
+    height: 350px;
+  }
+}
+
+@media (max-width: 480px) {
+  .carousel-container {
+    height: 300px;
+  }
+}

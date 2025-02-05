@@ -1,0 +1,156 @@
+/* Import Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
+
+/* Import FontAwesome for icons */
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css');
+
+/* Semi-Circle Navigation Bar */
+.nav-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 150px;
+    background: linear-gradient(to bottom, #c69f94, #d9d2c3);
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 0;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Semi-circle */
+.semi-circle {
+    position: relative;
+    width: 650px;
+    height: 110px;
+    background: linear-gradient(to bottom, #c69f94, #d9d2c3);
+    border-radius: 0 0 650px 650px;
+    box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: 5px;
+}
+
+/* Logo Styling */
+.nav-logo {
+    width: 70px;
+    height: auto;
+    margin-bottom: -15px;
+}
+
+/* Shop Name Styling */
+.shop-name {
+    font-family: 'Great Vibes', cursive;
+    font-size: 2.5rem;
+    color: white;
+    margin-top: -10px;
+    margin-bottom: 0px;
+}
+
+/* Navbar Links */
+.nav-links {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    width: 100%;
+    margin-top: -14px;
+}
+
+/* Styling each link */
+.nav-links a {
+    text-decoration: none;
+    font-size: 1rem;
+    color: white;
+    font-weight: bold;
+    padding: 6px 12px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+/* Change color on hover */
+.nav-links a:hover {
+    color: #8b0000;
+}
+
+/* Icon styles */
+.nav-links i {
+    font-size: 1.1rem;
+    transition: color 0.3s ease;
+}
+
+/* Change icon color on hover */
+.nav-links a:hover i {
+    color: #8b0000;
+}
+
+/* 🔹 Mobile Styles */
+@media (max-width: 768px) {
+    .nav-container {
+        height: 90px; /* Reduce navbar height */
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .semi-circle {
+        width: 100%;
+        height: auto;
+        border-radius: 0;
+        padding-top: 10px;
+    }
+
+    .nav-logo {
+        width: 50px; /* Reduce logo size */
+        margin-bottom: 0;
+    }
+
+    .shop-name {
+        font-size: 1.8rem; /* Reduce text size */
+        text-align: center;
+    }
+
+    /* 🔹 Hide links by default on mobile */
+    .nav-links {
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+        display: none;
+        background: rgba(0, 0, 0, 0.8);
+        padding: 10px;
+        border-radius: 0 0 15px 15px;
+    }
+
+    /* Show links when active */
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-links a {
+        padding: 10px;
+        display: block;
+        font-size: 1rem;
+    }
+
+    /* Hamburger Menu */
+    .menu-icon {
+        display: block;
+        position: absolute;
+        top: 15px;
+        right: 20px;
+        font-size: 24px;
+        color: white;
+        cursor: pointer;
+    }
+}
+
+@media (min-width: 769px) {
+    .menu-icon {
+        display: none;
+    }
+}

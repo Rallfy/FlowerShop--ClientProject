@@ -1,0 +1,71 @@
+/* Reviews Container */
+.reviews-container {
+    text-align: center;
+    padding: 40px 20px;
+    background-color: #ffffff;
+}
+
+/* Title */
+.reviews-title {
+    font-family: "Cormorant Garamond", serif;
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+/* Grid Layout */
+.reviews-grid {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+/* Individual Review Card */
+.review-card {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 280px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Push stars to bottom */
+    height: 250px; /* Set a fixed height to align stars */
+}
+
+/* Review Text */
+.review-text {
+    font-size: 16px;
+    font-style: italic;
+    color: #444;
+    flex-grow: 1; /* Allows text to expand without pushing stars */
+}
+
+/* Review Author */
+.review-author {
+    font-size: 14px;
+    font-weight: bold;
+    color: #222;
+    margin-bottom: 10px;
+}
+
+/* Stars - Ensures they always stay at the bottom */
+.review-stars {
+    font-size: 18px;
+    margin-top: auto; /* Push stars to bottom */
+}
+
+/* Responsive for Mobile */
+@media (max-width: 768px) {
+    .reviews-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .review-card {
+        width: 100%; /* Full width on smaller screens */
+        max-width: 320px;
+    }
+}

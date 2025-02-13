@@ -1,0 +1,53 @@
+/* Portfolio Page Container */
+.portfolio-container {
+    text-align: center;
+    padding: 50px 20px;
+    background: linear-gradient(to bottom, #d9d2c3, #FAD2A0);
+}
+
+/* Portfolio Title */
+.portfolio-title {
+    font-family: "Cormorant Garamond", serif;
+    font-size: 2.5rem;
+    color: #855B27;
+    margin-bottom: 30px;
+}
+
+/* Masonry Grid */
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Auto-sizing columns */
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Portfolio Card Styling */
+.portfolio-card {
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    background-color: white;
+}
+
+/* Portfolio Images */
+.portfolio-image {
+    width: 100%;
+    height: 400px;
+    display: block;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+/* Responsive Layout */
+@media (max-width: 768px) {
+    .portfolio-grid {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    }
+}
+
+@media (max-width: 480px) {
+    .portfolio-grid {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    }
+}

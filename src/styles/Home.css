@@ -1,0 +1,63 @@
+.home-page {
+    /* Let it span the full screen width with no extra container constraints */
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  
+    /* This ensures no horizontal scrollbars appear if an image is slightly larger */
+    overflow-x: hidden;
+  }
+  
+  /* 
+    Make each image exactly the screen’s width:
+    1) `width: 100vw;` means full browser viewport width 
+    2) `height: auto;` keeps aspect ratio 
+    3) `display: block;` to remove default inline gap 
+  */
+  .hero-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+  }
+  
+  /* Middle text block styling */
+  .middle-text-container {
+    text-align: center;
+    padding: 40px 20px;
+    font-family: "Cormorant Garamond", serif;
+  }
+
+  .review-text-container {
+    text-align: center;
+    padding: 40px 20px;
+    font-family: "Cormorant Garamond", serif;
+  }
+  
+  /* Limit text width so it doesn’t stretch too wide */
+  .middle-text {
+    max-width: 800px;
+    margin: 0 auto;
+    font-size: 24px;
+    line-height: 1.4;
+  }
+  
+  /* “Learn More” link style */
+  .learn-more-link {
+    color: #000;
+    text-decoration: underline;
+  }
+  .learn-more-link:hover {
+    color: #555;
+  }
+  
+  /* OPTIONAL Mobile breakpoints */
+  @media (max-width: 768px) {
+    .middle-text {
+      font-size: 20px;
+    }
+    .middle-text-container {
+      padding: 20px;
+    }
+  }
+  

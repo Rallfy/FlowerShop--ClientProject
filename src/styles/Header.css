@@ -1,0 +1,107 @@
+/* Import Font */
+@import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda+SC:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&display=swap');
+
+/* ========== BASE NAVBAR ========== */
+.navbar {
+  width: 100%;
+  background-color: #F0CDAF;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* brand left, links right on desktop */
+  padding: 15px 30px;
+  box-sizing: border-box;
+}
+
+/* 
+  .navbar-container limits width to 1400px & centers horizontally.
+  If you want the brand truly pinned to browser edge, remove `margin: 0 auto;`
+*/
+.navbar-container {
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto; /* Center container */
+  display: flex;
+  align-items: center;
+  justify-content: space-between; 
+  padding: 0 20px; /* side padding inside the container */
+}
+
+/* BRAND TEXT */
+.navbar-text-logo {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 28px;
+  font-weight: bold;
+  color: #333;
+  text-decoration: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* HAMBURGER ICON (hidden on desktop) */
+.menu-icon {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 28px;
+  cursor: pointer;
+  margin-right: 20px;
+}
+
+/* DESKTOP NAV LINKS */
+.nav-links {
+  display: flex;
+  gap: 40px;
+  align-items: center;
+  transition: transform 0.3s ease;
+}
+
+.nav-link {
+  font-size: 18px;
+  color: black;
+  text-decoration: none;
+  font-family: "Cormorant Garamond", serif;
+}
+
+/* ========== MEDIA QUERIES ========== */
+
+/* Tablet: reduce gap */
+@media (max-width: 1024px) {
+  .nav-links {
+    gap: 20px;
+  }
+}
+
+/* MOBILE (<= 768px):
+   - Show hamburger
+   - Slide nav in from the right
+*/
+@media (max-width: 768px) {
+  .menu-icon {
+    display: block; /* show hamburger on mobile */
+  }
+
+  /* Hide desktop nav by default on mobile, slide in from right */
+  .nav-links {
+    position: absolute;
+    top: 60px;         /* just below top nav bar */
+    right: 0;
+    flex-direction: column;
+    background-color: #FAD2A0;
+    padding: 20px;
+    gap: 20px;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.15);
+
+    width: 200px;
+    transform: translateX(100%);
+    transition: transform 0.3s ease-in-out;
+  }
+
+  /* When .open is added, menu slides in */
+  .nav-links.open {
+    transform: translateX(0);
+  }
+}

@@ -6,7 +6,7 @@ This is a complete **e-commerce flower shop website** built for a real client, _
 
 ---
 
-## 📸 Overview
+## Overview
 
 The website provides a modern, elegant, and mobile-friendly interface for showcasing flower bouquets, arrangements, and gifts. The platform supports:
 

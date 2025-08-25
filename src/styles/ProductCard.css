@@ -1,43 +1,70 @@
 .product-card {
-    border: 1px solid #ddd;
-    border-radius: 10px;
-    overflow: hidden;
-    text-align: center;
-    padding: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s;
-  }
-  
-  .product-card:hover {
-    transform: scale(1.05);
-  }
-  
-  .product-image {
-    width: 100%;
-    height: 150px;
-    object-fit: cover;
-  }
-  
-  .product-name {
-    font-size: 1.2rem;
-    color: #333;
-  }
-  
-  .product-details {
-    font-size: 0.9rem;
-    color: #666;
-  }
-  
-  .details-button {
-    padding: 10px 20px;
-    background: #8b0000;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-  
-  .details-button:hover {
-    background: #a00000;
-  }
-  
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  overflow: hidden;
+  text-align: center;
+  padding: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+  display: flex;
+  flex-direction: column;
+  height: 100%; /* Ensures all cards have the same height */
+}
+
+.product-card:hover {
+  transform: scale(1.05);
+}
+
+.product-image {
+  width: 100%;
+  height: 180px; /* Keep image height fixed */
+  object-fit: cover;
+  border-radius: 8px;
+  display: block;
+}
+
+/* Name & Details Section */
+.product-name {
+  font-size: 1.2rem;
+  color: #333;
+  margin: 10px 0;
+}
+
+.product-details {
+  font-size: 0.9rem;
+  color: #666;
+  flex-grow: 1; /* Allows this section to take remaining space */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 5px;
+}
+
+/* 🚀 New: Push the button to the bottom */
+.product-card .button-container {
+  margin-top: auto; /* Push button to bottom without affecting image */
+  display: flex;
+  justify-content: center;
+  padding-top: 10px; /* Space before button */
+}
+
+.details-button {
+  padding: 10px 20px;
+  background: #8b0000;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 80%; /* Make button width consistent */
+}
+
+.details-button:hover {
+  background: #a00000;
+}
+
+.product-image.ios-fix {
+  will-change: transform;
+  transform: translateZ(0);
+  backface-visibility: hidden;
+}

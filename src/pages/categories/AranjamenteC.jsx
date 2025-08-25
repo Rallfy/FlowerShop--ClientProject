@@ -8,7 +8,7 @@ import "./CategoriesPage.css";
 import { db } from "../../config/firebase";
 import { collection, getDocs } from "firebase/firestore";
 
-const ClassicFlorist = () => {
+const AranjamenteC = () => {
   const [products, setProducts] = useState([]);
   const [searchTerm, setSearchTerm] = useState("");
   const [selectedProduct, setSelectedProduct] = useState(null);
@@ -24,9 +24,9 @@ const ClassicFlorist = () => {
           ...doc.data(),
         }));
 
-        // Filter to display only "Florarie Clasica" category
+        // Filter to display only "Aranjamente Cutie" category
         const filteredProducts = productList.filter(
-          (product) => product.category === "Buchete"
+          (product) => product.category === "Aranjamente cutie"
         );
 
         setProducts(filteredProducts);
@@ -82,4 +82,4 @@ const ClassicFlorist = () => {
   );
 };
 
-export default ClassicFlorist;
+export default AranjamenteC;

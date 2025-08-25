@@ -8,7 +8,7 @@ import "./CategoriesPage.css";
 import { db } from "../../config/firebase";
 import { collection, getDocs } from "firebase/firestore";
 
-const ClassicFlorist = () => {
+const Services = () => {
   const [products, setProducts] = useState([]);
   const [searchTerm, setSearchTerm] = useState("");
   const [selectedProduct, setSelectedProduct] = useState(null);
@@ -24,9 +24,8 @@ const ClassicFlorist = () => {
           ...doc.data(),
         }));
 
-        // Filter to display only "Florarie Clasica" category
         const filteredProducts = productList.filter(
-          (product) => product.category === "Buchete"
+          (product) => product.category === "Plante și flori la ghiveci"
         );
 
         setProducts(filteredProducts);
@@ -38,7 +37,6 @@ const ClassicFlorist = () => {
     fetchProducts();
   }, []);
 
-  // Filter products based on search input
   const filteredProducts = products.filter((product) =>
     product.name.toLowerCase().includes(searchTerm.toLowerCase())
   );
@@ -82,4 +80,4 @@ const ClassicFlorist = () => {
   );
 };
 
-export default ClassicFlorist;
+export default Services;

@@ -1,36 +1,93 @@
+/* ✅ Popup Background Overlay */
 .popup-overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.5);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 1000;
-  }
-  
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  overflow: hidden; /* Prevents page from scrolling */
+}
+
+/* ✅ Popup Content - Now Scrollable! */
+.popup-content {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  max-width: 500px;
+  width: 90%;
+  max-height: 90vh; /* Prevents it from being too tall */
+  overflow-y: auto; /* Makes it scrollable inside */
+  display: flex;
+  flex-direction: column;
+}
+
+/* ✅ Bigger Product Image */
+.popup-image {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+/* ✅ Title */
+.popup-title {
+  font-size: 22px;
+  font-weight: bold;
+  color: #855B27;
+  margin-bottom: 10px;
+}
+
+/* ✅ Description */
+.popup-description {
+  font-size: 16px;
+  color: #444;
+  flex-grow: 1; /* Pushes button to bottom */
+  overflow-wrap: break-word; /* Prevents text overflow */
+  text-align: left; /* Improves readability */
+  line-height: 1.5; /* Better spacing */
+}
+
+/* ✅ Close Button - Always Visible */
+.close-popup {
+  padding: 12px 15px;
+  background: #855B27;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  margin-top: 15px; /* Space above button */
+  width: 100%; /* Full width on mobile */
+}
+
+.close-popup:hover {
+  background: #6b4420;
+}
+
+/* ✅ Mobile-Friendly Adjustments */
+@media (max-width: 480px) {
   .popup-content {
-    background: #fff;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    text-align: center;
-    max-width: 500px;
+    width: 95%; /* More width for smaller screens */
+    max-height: 85vh; /* Slightly shorter */
   }
-  
+
+  .popup-title {
+    font-size: 20px; /* Reduce size slightly */
+  }
+
+  .popup-description {
+    font-size: 14px;
+  }
+
   .close-popup {
-    margin-top: 20px;
-    padding: 10px 20px;
-    background: #8b0000;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
+    font-size: 0.9rem; /* Smaller button text */
   }
-  
-  .close-popup:hover {
-    background: #a00000;
-  }
-  
+}

@@ -2,44 +2,58 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 import "../styles/Categories.css";
 import category1 from "../assets/categories/ctg1_f1.jpg"
-import category2 from "../assets/categories/ctg2_nunta.jpg"
-import category3 from "../assets/categories/ctg3_fn.jpg"
-import category4 from "../assets/categories/ctg4_services.jpg"
-import category5 from "../assets/categories/ctg5_gifts.jpg"
+import category2 from "../assets/categories/ctg2_pg.jpg"
+import category3 from "../assets/categories/ctg3_gifts.jpg"
+import category4 from "../assets/categories/ctg4_nunta.jpg"
+import category5 from "../assets/categories/ctg5_fn.jpg"
+import category_new1 from "../assets/categories/ctg_aranjamente_cutie.jpeg"
+import category_new2 from "../assets/categories/ctg_ocazii_speciale.jpeg"
 
 const Categories = () => {
   const navigate = useNavigate();
 
   const categories = [
     {
-      title: "Florarie Clasică",
-      description: "Explorați o varietate de aranjamente florale clasice.",
+      title: "Buchete",
+      description: "Explorați o varietate de buchete clasice.",
       image: category1,
-      route: "/categorii/florarie-clasica",
+      route: "/categorii/buchete",
+    },
+    {
+      title: "Aranjamente cutie",
+      description: "Descoperiți aranjamente florare minunate in cutii.",
+      image: category_new1,
+      route: "/categorii/aranjamente-cutie",
+    },
+    {
+      title: "Plante si flori la ghiveci",
+      description: "Toate produsele noastre din gama de planta la ghiveci.",
+      image: category2,
+      route: "/categorii/plante-ghiveci",
+    },
+    {
+      title: "Cadouri",
+      description: "Descoperă cele mai frumoase cadouri pentru momente memorabile.",
+      image: category3,
+      route: "/categorii/cadouri",
     },
     {
       title: "Nunți și petreceri",
       description: "Găsiți flori perfecte pentru nunți și evenimente.",
-      image: category2,
+      image: category4,
       route: "/categorii/nunti-petreceri",
+    },
+    {
+      title: "Ocazii speciale",
+      description: "Descoperiți aranjamente florale deosebite pentru cele mai îndrăgite sărbători din an.",
+      image: category_new2,
+      route: "/categorii/ocazii-speciale",
     },
     {
       title: "Produse funerare",
       description: "Descoperiți aranjamente funerare personalizate.",
-      image: category3,
-      route: "/categorii/produse-funerare",
-    },
-    {
-      title: "Servicii",
-      description: "Toate serviciile noastre, transporturi și comenzi.",
-      image: category4,
-      route: "/categorii/servicii",
-    },
-    {
-      title: "Cadouri",
-      description: "Descoperiți cele mai frumoase cadouri pentru ocaziile speciale.",
       image: category5,
-      route: "/categorii/cadouri",
+      route: "/categorii/produse-funerare",
     },
   ];
 

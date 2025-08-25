@@ -7,8 +7,8 @@ const Footer = () => {
       <div className="footer-column">
         <h3>Contact</h3>
         <p><strong>Email:</strong> florariacrinulregal@gmail.com</p>
-        <p><strong>Telefon:</strong> +40 741 035 878</p>
-        <p><strong>Adresă:</strong> Strada Nicolae Bălcescu, Șomcuta Mare 437335, România</p>
+        <p><strong>Telefon:</strong> +40 741035878 / +40 746014933 </p>
+        <p><strong>Adresă:</strong> Strada Nicolae Bălcescu 2, Șomcuta Mare 437335, România</p>
       </div>
       
       <div className="footer-column">
@@ -21,6 +21,16 @@ const Footer = () => {
             className="footer-link"
           >
             Facebook
+          </a>
+        </p>
+        <p>
+          <a 
+            href="https://www.instagram.com/florariacrinulregal?igsh=dHR5NHpmdDQyYTJq&utm_source=qr"
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="footer-link"
+          >
+            Instagram
           </a>
         </p>
       </div>

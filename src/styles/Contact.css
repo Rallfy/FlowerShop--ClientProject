@@ -9,6 +9,7 @@
     font-size: 2rem;
     font-weight: bold;
     margin-bottom: 10px;
+    margin-top: 80px;
   }
   
   .contact-description {
@@ -74,3 +75,18 @@
     background-color: #6b4420;
   }
   
+  select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    background-color: white;
+  }
+  
+  .note {
+    font-size: 0.9rem;
+    color: #555;
+    margin-top: 5px;
+    display: block;
+  }

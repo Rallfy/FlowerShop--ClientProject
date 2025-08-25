@@ -12,8 +12,9 @@
 
 /* ✅ Adjust Image Size */
 .about-image {
+  margin-top: 90px;
   width: 100%;
-  max-width: 800px; /* Keeps the format */
+  max-width: 700px; /* Keeps the format */
   height: auto; /* Ensures aspect ratio is maintained */
   max-height: 700px; /* Limits the height */
   object-fit: cover;

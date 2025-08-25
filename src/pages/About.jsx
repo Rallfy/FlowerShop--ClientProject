@@ -1,27 +1,56 @@
-import React from "react";
-import "../styles/About.css"; // Importing separate CSS file
-import about from "../assets/about.jpg"; // Ensure this path is correct
+import React, { useEffect, useState } from "react";
+import { getFirestore, doc, getDoc } from "firebase/firestore";
+import "../styles/About.css";
 
 const About = () => {
+  const [aboutImageUrl, setAboutImageUrl] = useState("");
+
+  useEffect(() => {
+    const fetchAboutImage = async () => {
+      const db = getFirestore();
+      const docRef = doc(db, "aboutus", "aboutpicture");
+      const docSnap = await getDoc(docRef);
+      if (docSnap.exists()) {
+        setAboutImageUrl(docSnap.data().imageURL);
+      }
+    };
+    fetchAboutImage();
+  }, []);
+
   return (
     <div className="about-container">
-      {/* Hero Image */}
       <div className="about-image-wrapper">
-        <img src={about} alt="Floraria Crinul Regal - About Us" className="about-image" />
+        {aboutImageUrl && (
+          <img
+            src={aboutImageUrl}
+            alt="Floraria Crinul Regal - About Us"
+            className="about-image"
+          />
+        )}
       </div>
 
-      {/* Heading */}
       <h2 className="about-heading">
-        Cu o abordare artistică și o afinitate pentru culoare, Floraria Crinul Regal se inspiră din frumusețea naturii pentru a crea aranjamente unice și sofisticate.
+        La Florăria Crinul Regal, transformăm florile în povești și emoții de neuitat.
       </h2>
 
-      {/* Description Text */}
       <div className="about-text">
         <p>
-          Floraria Crinul Regal este un studio floral de înaltă clasă care se specializează în nunți și evenimente speciale. Ne concentrăm pe eleganță, rafinament și naturalețe în fiecare aranjament floral.
+          Cu o experiență de peste 20 de ani, am devenit un reper în arta
+          floristică, oferind buchete și aranjamente elegante pentru orice
+          ocazie.
         </p>
         <p>
-          Lucrăm îndeaproape cu fiecare client pentru a ne asigura că aranjamentele florale sunt o reflectare a personalității și evenimentului lor, fără a crea același design de două ori.
+          Fie că sărbătorești o nuntă de vis, un botez emoționant sau o
+          aniversare specială, noi creăm decoruri care impresionează și rămân în
+          amintire. Cu pasiune și rafinament, dăm viață fiecărui detaliu:
+          aranjamente florale deosebite, photo corner-uri care inspiră zâmbete
+          și decoruri creative cu baloane. Totul este realizat cu grijă, astfel
+          încât atmosfera să reflecte perfect emoția și unicitatea momentului
+          tău special.
+        </p>
+        <p>
+          Alege Florǎria Crinul Regal – acolo unde pasiunea pentru design floral
+          și decor întâlnește eleganța și profesionalismul!
         </p>
       </div>
     </div>

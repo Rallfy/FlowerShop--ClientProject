@@ -65,6 +65,28 @@
   text-decoration: none;
   font-family: "Cormorant Garamond", serif;
 }
+/* Container for logo image and text */
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Logo image styling */
+.logo-image {
+  width: 85px; /* Increase width */
+  height: auto; /* Maintain aspect ratio */
+  /* margin-right: 15px;  */
+  
+}
+
+/* Ensure text aligns center vertically with the image */
+.navbar-text-logo span {
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 24px;
+  font-weight: bold;
+}
 
 /* ========== MEDIA QUERIES ========== */
 
@@ -81,8 +103,30 @@
 */
 @media (max-width: 768px) {
   .menu-icon {
-    display: block; /* show hamburger on mobile */
+    /* display: block;  */
+    padding: 10px 15px;
   }
+
+    /* Move LOGO + TITLE to the LEFT */
+    .logo-container {
+      margin-left: 10px; /* Move it slightly left */
+    }
+
+    .logo-image {
+      width: 75px; /* Slightly smaller for mobile */
+    }
+
+
+    .navbar-text-logo span {
+      font-size: 20px; /* Adjust text size */
+    }
+
+      /* Move MENU ICON (hamburger) to the RIGHT */
+  .menu-icon {
+    display: block; /* Show hamburger on mobile */
+    margin-right: 15px; /* Push it further right */
+  }
+
 
   /* Hide desktop nav by default on mobile, slide in from right */
   .nav-links {
